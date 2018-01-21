@@ -1,0 +1,14 @@
+{
+  "name": "Test GitHub Exrtension",
+  "description" : "Test Extension to Work with GitHub API",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+	"default_popup": "github.html",
+	"default_icon": "github.png"
+  },
+  "permissions": [
+	"activeTab",
+	"storage"
+  ]
+}
