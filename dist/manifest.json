@@ -1,0 +1,27 @@
+{
+  "name": "Test GitHub Exrtension",
+  "description": "Test Extension to Work with GitHub API",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "src/index.html",
+    "default_icon": "github.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "src/inline.bundle.js",
+    "src/inline.bundle.js.map",
+    "src/main.bundle.js",
+    "src/main.bundle.js.map",
+    "src/polyfills.bundle.js",
+    "src/polyfills.bundle.js.map",
+    "src/styles.bundle.js",
+    "src/styles.bundle.js.map",
+    "src/vendor.bundle.js",
+    "src/vendor.bundle.js.map"
+  ]
+}
