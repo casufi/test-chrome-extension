@@ -1,0 +1,41 @@
+<h2>
+  Top repos from github
+</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Owner</th>
+    <th>Closed issues</th>
+    <th>Open issues</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+	    <input type="text" [(ngModel)]="ownerStr">
+    </td>
+    <td>
+			<a
+				class="mdi mdi-sort"
+				[ngClass]="{'mdi-sort': !isClosedSorted, 'mdi-sort-ascending': isClosedSorted && sortOrdAsc, 'mdi-sort-descending': isClosedSorted && !sortOrdAsc}"
+				(click)="changeSort('closed')">
+			</a>
+		</td>
+    <td>
+			<a
+				class="mdi mdi-sort"
+				[ngClass]="{'mdi-sort': !isOpenSorted, 'mdi-sort-ascending': isOpenSorted && sortOrdAsc, 'mdi-sort-descending': isOpenSorted && !sortOrdAsc}"
+				(click)="changeSort('open')">
+			</a>
+		</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let repo of gitHubRepos; index as i; first as isFirst">
+    <td>{{repo.name}}</td>
+    <td>{{repo.ownername}}</td>
+    <td>{{repo.closed_issues}}</td>
+    <td>{{repo.open_issues}}</td>
+  </tr>
+  </tbody>
+</table>
